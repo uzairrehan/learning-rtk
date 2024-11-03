@@ -58,6 +58,7 @@ aap ka koi bhi component directly koi bhi aisa function istemal nhi karsakta jo 
 store = matlab single source of truth 
 
 reducer = matlab aap ko store men kuch bhi change karna he .. konse store men change karna he jese ke auth ka cart ka etc.. matlab ke aik store men bhi mini stores/portions ho sakte hen.  tuo is sab ki functionality wala part reducer ke andar jata he .. reducers woh hote hen jo redux ki state ko update karte hen
+tuo reducer basically aik function hota he jis ke andar koi bhi action ataa he to phir reducer pehle us function ko samjhta he ke woh kya karne wala he phir woh apne andar hi store/state ko update kardeta he  
 
 tuo is ke baad 2 hi method parhne hen useSelector and useDispatch
 
