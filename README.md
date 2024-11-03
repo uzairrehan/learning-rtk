@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Redux
 
-## Getting Started
 
-First, run the development server:
+1. class based react and classic redux is bonus topics nhi parha to bhi chalega
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+modern redux(redux toolkit) is eventual upgradation of redux
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+here is the website (https://redux-toolkit.js.org/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+redux is an independent statemanagement library 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+around 80.5% of developers use "Redux"
+
+
+
+redux ko hum react ke ilawa bhi dusron men use karsakte hen
+
+
+
+agar aaap ko react ke sath redux ko use karna he to aap ko "redux" & "react-redux" dono library use karna paregi .. to is se pata chala ke 2 libraraiea install karna padegi
+
+
+
+"react-redux" aik "redux" ka implementation hai wiring karne ke liyen
+
+
+
+redux toolkit use karne se boht sare kaam asan ho jate hen
+
+
+
+
+to aik library banai facebook ne "Flux" aur is men dataflow itna acha nhi tha tooo iss se inspire ho kar aik libraryy banni redux
+
+
+
+redux men bhi kuch masla ho raha tha redux-thunk middlewares
+
+
+
+to redux ko setup karna men boht wait karna pata tha
+
+
+
+
+concepts : 
+
+aap ka koi bhi component directly koi bhi aisa function istemal nhi karsakta jo ke store ko update kare 
+
+store = matlab single source of truth 
+
+reducer = matlab aap ko store men kuch bhi change karna he .. konse store men change karna he jese ke auth ka cart ka etc.. matlab ke aik store men bhi mini stores/portions ho sakte hen.  tuo is sab ki functionality wala part reducer ke andar jata he .. reducers woh hote hen jo redux ki state ko update karte hen
+
+tuo is ke baad 2 hi method parhne hen useSelector and useDispatch
+
+useSelector =  matlab jab koi value select/mangawani karni he store se  
+useDispatch(dispatch means bhejna) =  matlab jab koi value bhejni/update karni he store men .. dispatch reducer ko use karte huwe store  mne changes karta he
+
+
+
+
+
+onClick(fun(val)) ese use kyun nhi karsakte ?
+
+answer = onClick men sirf reference dana allow he
+kyun ke is men hum call kardenge jo immediately call ho jaye ga .. jab ke humen to click par karna he. to isi waja se hum callback function dalen ge uss men is ko call kardenge . to phir woh onclick pr callhojaye ga. just like this onClick(()=> fun(val)). kyun ke humen parameters pass karna he 		
+
+
+
+never mutate your state
+
+
+reducer module ko define karta he
