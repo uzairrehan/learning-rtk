@@ -12,9 +12,9 @@ const counterSlice = createSlice({
     decrement: (state) => {
       state.count = state.count > 0 ? (state.count -= 1) : 0;
     },
-    reset:(state) => {
-      state.count = 0
-    }
+    reset: (state) => {
+      state.count = 0;
+    },
   },
 });
 
