@@ -1,15 +1,34 @@
+"use client";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { decrement, increment } from "@/lib/slices/counterSlice";
+import { RootState } from "@/lib/store";
+import React from "react";
 
 export default function Counter() {
-  const count = useAppSelector((state) => state.counter.counter);
+  const counter = useAppSelector((state: RootState) => state?.counter?.count);
   const dispatch = useAppDispatch();
+
   return (
-    <div>
-      <h1>Im Counter</h1>
-      <h4>{count}</h4>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+    <div className="h-screen w-full flex justify-center items-center flex-col">
+      <h1 className="text-3xl font-bold">Counter {counter}</h1>
+      <div className="flex gap-4">
+        <button
+          className="bg-black text-white p-2 rounded-md"
+          onClick={() => {
+            dispatch(increment());
+          }}
+        >
+          Increment
+        </button>
+        <button
+          className="bg-black text-white p-2 rounded-md"
+          onClick={() => {
+            dispatch(decrement());
+          }}
+        >
+          Decrement
+        </button>
+      </div>
     </div>
   );
 }
