@@ -1,20 +1,15 @@
-"use client";
-
-import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { decrement, increment } from "@/lib/slices/counterSlice";
 
 export default function Counter() {
-  const [number, setNumber] = useState(0);
-  const 
+  const count = useAppSelector((state) => state.counter.counter);
+  const dispatch = useAppDispatch();
   return (
     <div>
       <h1>Im Counter</h1>
-      <h4>{number}</h4>
-      <button onClick={() => setNumber((prev) => prev + 1)}>+</button>
-      <button
-        onClick={() => ({})}
-      >
-        -
-      </button>
+      <h4>{count}</h4>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   );
 }
