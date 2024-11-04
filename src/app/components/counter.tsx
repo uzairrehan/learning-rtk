@@ -1,7 +1,10 @@
 "use client";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { decrement, increment } from "@/lib/slices/counterSlice";
-import { RootState } from "@/lib/store";
+import { useAppDispatch, useAppSelector } from "lib/hooks";
+import { decrement, increment } from "lib/slices/counterSlice";
+import { RootState } from "lib/store";
+// import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+// import { decrement, increment } from "@/lib/slices/counterSlice";
+// import { RootState } from "@/lib/store";
 import React from "react";
 
 export default function Counter() {
