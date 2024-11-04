@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Counter() {
   const counter = useAppSelector((state: RootState) => state?.counter?.count);
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch(); 
 
   return (
     <div>
